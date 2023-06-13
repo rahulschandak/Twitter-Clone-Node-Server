@@ -22,12 +22,21 @@ export const findUserByCredentials = (username, password) => {
   return null;
 };
 
-export const createUser = (user) => users.push(user);
+// export const createUser = (user) => users.push(user);
+export const createUser = (user) => {
+  users.push(user);
+  return user;
+};
 
+// export const updateUser = (uid, user) => {
+//   const index = users.findIndex((u) => u._id === uid);
+//   users[index] = { ...users[index], ...user };
+//   return { status: "ok" };
+// };
 export const updateUser = (uid, user) => {
   const index = users.findIndex((u) => u._id === uid);
   users[index] = { ...users[index], ...user };
-  return { status: "ok" };
+  return { status: "ok", user: users[index] };
 };
 
 export const deleteUser = (uid) => {
