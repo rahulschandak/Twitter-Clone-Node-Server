@@ -16,6 +16,7 @@ app.use((req, res, next) => {
   const allowedOrigins = [
     "http://localhost:3000",
     "https://a5--papaya-salamander-4aad5c.netlify.app/",
+    "https://tuiter-node-server-app-7rwr.onrender.com/api",
   ];
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
