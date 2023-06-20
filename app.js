@@ -45,7 +45,12 @@ app.use(
   session({
     secret: "any string",
     resave: false,
+    proxy: true,
     saveUninitialized: true,
+    cookie: {
+      sameSite: "none",
+      secure: true,
+    },
   })
 );
 
