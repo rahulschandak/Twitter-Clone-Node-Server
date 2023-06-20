@@ -65,7 +65,9 @@ app.use(
     store: new session.MemoryStore(),
   })
 );
+
 app.use(express.json());
+
 TuitsController(app);
 HelloController(app);
 UserController(app);
