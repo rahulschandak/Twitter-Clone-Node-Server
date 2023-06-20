@@ -17,9 +17,10 @@ app.set("trust proxy", 1);
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3000","https://a6--papaya-salamander-4aad5c.netlify.app/"]
   })
 );
+
 // app.use((req, res, next) => {
 //   const allowedOrigins = [
 //     "http://localhost:3000",
